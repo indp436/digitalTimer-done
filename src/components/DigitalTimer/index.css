@@ -1,0 +1,124 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.bg {
+  display: flex;
+  justify-content: center;
+}
+
+.main-container {
+  background-image: linear-gradient(to right, #defafe, #cffcf1);
+  height: 600px;
+  width: 800px;
+  box-shadow: 0px 4px 16px 0px #bfbfbf;
+  margin: 30px;
+}
+
+.left-container {
+  background-image: url('https://assets.ccbp.in/frontend/react-js/digital-timer-elapsed-bg.png');
+  height: 380px;
+  width: 400px;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.title {
+  color: #1e293b;
+  text-align: center;
+  margin-top: 50px;
+}
+.time-circle {
+  background-color: #ffffff;
+  border-radius: 59px;
+  height: 120px;
+  width: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.time-in-circle {
+  color: aqua;
+}
+.running {
+  font-weight: 700;
+  font-size: 18px;
+  margin-top: 0;
+  padding-top: 0;
+}
+.sub-container {
+  display: flex;
+}
+.buttons-container {
+  display: flex;
+  align-items: center;
+}
+.play-button {
+  height: 30px;
+  width: 30px;
+}
+.right-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 100px;
+}
+.reset-button {
+  height: 30px;
+  width: 30px;
+  margin-left: 20px;
+}
+.play-button-text {
+  margin-left: 10px;
+  font-weight: 600;
+}
+.timer-buttons-container {
+  margin-top: 20px;
+}
+.timer-buttons {
+  display: flex;
+  width: 140px;
+  justify-content: space-evenly;
+  margin-top: 10px;
+  font-weight: 600;
+}
+.time-limit-box {
+  height: 30px;
+  width: 60px;
+  background-color: aqua;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.span {
+  font-weight: 900;
+  font-size: 20px;
+  background-color: transparent;
+  border: 0;
+}
+.set-time-text {
+  font-weight: 600;
+}
+.timer-buttons-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.start-or-stop-button {
+  border: 0;
+  background-color: transparent;
+}
+.reset-button {
+  background-color: transparent;
+  border: 0;
+}
+.reset-button-text {
+  margin-left: 30px;
+  font-weight: 600;
+}
