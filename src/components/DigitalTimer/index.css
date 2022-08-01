@@ -54,11 +54,43 @@
 }
 .buttons-container {
   display: flex;
+  width: 200px;
+  justify-content: space-evenly;
   align-items: center;
 }
-.play-button {
+.play-or-pause-icon {
   height: 30px;
   width: 30px;
+  margin-right: 10px;
+}
+
+.start-or-stop-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 20px;
+  background-color: transparent;
+  border: 0;
+  font-weight: 600;
+  font-family: 'Roboto';
+  font-size: 20px;
+}
+
+.reset-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border: 0;
+  font-weight: 600;
+  font-family: 'Roboto';
+  font-size: 20px;
+}
+
+.reset-icon {
+  height: 30px;
+  width: 30px;
+  margin-right: 10px;
 }
 .right-container {
   display: flex;
@@ -67,15 +99,7 @@
   align-items: center;
   margin-left: 100px;
 }
-.reset-button {
-  height: 30px;
-  width: 30px;
-  margin-left: 20px;
-}
-.play-button-text {
-  margin-left: 10px;
-  font-weight: 600;
-}
+
 .timer-buttons-container {
   margin-top: 20px;
 }
@@ -109,16 +133,4 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-.start-or-stop-button {
-  border: 0;
-  background-color: transparent;
-}
-.reset-button {
-  background-color: transparent;
-  border: 0;
-}
-.reset-button-text {
-  margin-left: 30px;
-  font-weight: 600;
 }

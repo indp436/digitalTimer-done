@@ -36,11 +36,9 @@ class DigitalTimer extends Component {
   }
 
   funCalled = () => {
-    const {isPaused, defaultTimeInMinutes} = this.state
+    const {isPaused} = this.state
 
-    if (isPaused) {
-      console.log('ksks')
-    } else {
+    if (!isPaused) {
       this.timerID = setInterval(this.tick, 1000)
       this.setState({
         isReset: true,
@@ -50,7 +48,7 @@ class DigitalTimer extends Component {
   }
 
   startOrStopButtonClicked = () => {
-    const {defaultTimeInSeconds, isReset} = this.state
+    const {isReset} = this.state
     this.setState(prevState => ({
       isPaused: !prevState.isPaused,
     }))
@@ -61,7 +59,7 @@ class DigitalTimer extends Component {
   }
 
   tick = () => {
-    const {isPaused, defaultTimeInSeconds, defaultTimeInMinutes} = this.state
+    const {isPaused, defaultTimeInSeconds} = this.state
     if (isPaused) {
       if (defaultTimeInSeconds <= 0) {
         this.setState(prevState => ({
@@ -96,7 +94,7 @@ class DigitalTimer extends Component {
     let {defaultTimeInMinutes, defaultTimeInSeconds} = this.state
 
     if (defaultTimeInSeconds < 10) {
-      defaultTimeInSeconds = ` 0${defaultTimeInSeconds.toString()}`
+      defaultTimeInSeconds = `0${defaultTimeInSeconds.toString()}`
     }
 
     if (defaultTimeInMinutes < 10) {
@@ -122,6 +120,7 @@ class DigitalTimer extends Component {
                   className="start-or-stop-button"
                   type="button"
                   onClick={this.startOrStopButtonClicked}
+                  alt={isPaused ? 'pause icon' : 'play icon'}
                 >
                   <img
                     src={
@@ -129,14 +128,12 @@ class DigitalTimer extends Component {
                         ? 'https://assets.ccbp.in/frontend/react-js/pause-icon-img.png'
                         : 'https://assets.ccbp.in/frontend/react-js/play-icon-img.png'
                     }
-                    alt="play icon"
-                    className="play-button"
+                    alt={isPaused ? 'pause icon' : 'play icon'}
+                    className="play-or-pause-icon"
                   />
+                  {isPaused ? 'Pause' : 'Start'}
                 </button>
 
-                <p className="play-button-text">
-                  {isPaused ? 'Stop' : 'Start'}
-                </p>
                 <button
                   className="reset-button"
                   type="button"
@@ -145,11 +142,10 @@ class DigitalTimer extends Component {
                   <img
                     src="https://assets.ccbp.in/frontend/react-js/reset-icon-img.png "
                     alt="reset icon"
-                    className="reset-button"
+                    className="reset-icon"
                   />
+                  Reset
                 </button>
-
-                <p className="reset-button-text">Reset</p>
               </div>
               <div className="timer-buttons-container">
                 <p className="set-time-text">Set Timer Limit</p>
